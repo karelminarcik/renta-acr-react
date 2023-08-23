@@ -1,6 +1,6 @@
 import OnePictureSlider from "./components/Slider"
 import Navbar from "./components/Navbar"
-// import Selectrank from "./components/Selectrank"
+import Selectrank from "./components/Selectrank"
 
 const App = () => {
   return <>
@@ -8,9 +8,9 @@ const App = () => {
           <div className="slider">
             <OnePictureSlider />
           </div>
-          {/* <form>
+          <form>
             <Selectrank />
-          </form> */}
+          </form>
           
   
   </>
