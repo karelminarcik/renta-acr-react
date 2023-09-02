@@ -1,15 +1,15 @@
 body {
-  background-color: #141414;
+  background-color: black;
   margin: 0;
 }
 
-/* Header */
+/* Navigation */
 
 header{
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: black;
+  background-color: #023535;
   height: 70px;
 
 }
@@ -26,40 +26,7 @@ header{
 
 /* Navigation */
 
-/* nav {
-  margin-right: 30px;
-}
 
-nav li {
-  display: inline-block;
-  list-style-type: none;
-  margin-right: 20px ;
-}
-
-nav li a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-}
-
-nav li a:hover {
-  border-bottom: solid 2px white;
-}
-
-.menu-icon {
-  display: none;
-  color: white;
-  margin-right: 35px;
-}
-
-@keyframes logo {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-} */
 
 /* Slider */
 
@@ -69,4 +36,91 @@ nav li a:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+/* Form */
+
+.calculator_wrap{
+  display: flex;
+  flex-direction: row;
+}
+
+.form-wrap {
+  background-color: #008F8C;
+  width: 50vw;
+  height: 50vh;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  
+}
+
+.form-wrap h2 {
+  color: #24e8ca;
+}
+
+.input-wrap {
+  align-items: center;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.input-wrap label{
+  min-width: 200px;
+  margin-right: 50px;
+  font-size: 20px;
+  color: #24e8ca;
+  text-align: left;
+  display: flex;
+  
+}
+
+.input-wrap input,
+.input-wrap select {
+  border: 2px solid #24e8ca;
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 15px 25px;
+  width: 300px;
+  color: #24e8ca;
+  border-radius: 24px;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.input-wrap input:focus,
+.input-wrap select:focus {
+  width: 400px;
+  border-color: #24e8ca;
+  transition: 0.5s;
+}
+
+input[type="submit"] {
+  border-radius: 24px;
+  padding: 10px 40px;
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  color: #24e8ca;
+  border: 2px solid #24e8ca;
+  width: 350px;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+
+input[type="submit"]:hover {
+  background-color: #214252;
+}
+
+#helmet {
+  color: white;
+  width: 50vw;
+  height: 50vh;
+  opacity: 20%;
 }

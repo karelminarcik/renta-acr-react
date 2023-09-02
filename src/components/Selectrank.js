@@ -1,10 +1,11 @@
 import "./Selectrank.css"
-import {ranks} from "../data/"
+import {ranks} from "../data"
 
 const Selectrank = () => {
 
 
-    return <div className="choose-rank">
+    return <div className="input-wrap">
+        
         <label for="ranks">
             Vaše hodnost
         </label>
