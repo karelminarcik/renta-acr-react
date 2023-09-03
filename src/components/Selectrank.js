@@ -1,26 +1,23 @@
 import "./Selectrank.css"
 import {ranks} from "../data"
 
-const Selectrank = () => {
+const Selectrank = ({ onSelect }) => {
+    const handleRankChange = (event) => {
+        const selectedValue = event.target.value
+        onSelect(selectedValue)
+    }
 
 
     return <div className="input-wrap">
         
-        <label for="ranks">
-            Vaše hodnost
-        </label>
-        <select id="ranks">
-            {
-                ranks.map ( (oneRank) => {
-                    const {id, text} = oneRank
-
-                    return <option key={id}>
-                        {text}
-                    </option>
-                })
-            }
-
-        </select>
+        <label htmlFor="ranks">Vaše hodnost</label>
+      <select id="ranks" onChange={handleRankChange}>
+        {ranks.map((oneRank) => (
+          <option key={oneRank.id} value={oneRank.text}>
+            {oneRank.text}
+          </option>
+        ))}
+      </select>
     </div>
 }
 

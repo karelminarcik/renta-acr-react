@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import OnePictureSlider from "./components/Slider"
 import Navbar from "./components/Navbar"
 import Selectrank from "./components/Selectrank"
@@ -6,6 +7,15 @@ import './script.js'
 
 
 const App = () => {
+
+  // Initialize state to store the selected rank
+  const [selectedRank, setSelectedRank] = useState('');
+
+  // Callback function to update the selected rank
+  const handleRankChange = (value) => {
+    setSelectedRank(value);
+  };
+
   return <>
           <Navbar />
           <div className="slider">
@@ -16,7 +26,7 @@ const App = () => {
             <form className="form-wrap">
               <h2>Výpočet výsluhového příspěvku vojaků AČR</h2>
               
-              <Selectrank />
+              <Selectrank onSelect={handleRankChange}/>
             
               <SelectAge />
               
@@ -31,6 +41,7 @@ const App = () => {
 
             <div id="helmet">
               <h2>Vase Renta</h2>
+              <p>Vaše hodnost: {selectedRank}</p>
             </div>
           </div>
 

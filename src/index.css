@@ -136,3 +136,12 @@ input[type="submit"]:hover {
   background-size: cover;
 }
 
+#helmet h2 {
+  text-align: center;
+}
+
+#helmet p {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
