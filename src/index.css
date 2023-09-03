@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: black;
   margin: 0;
@@ -48,15 +55,15 @@ header{
 .form-wrap {
   background-color: #008F8C;
   width: 50vw;
-  height: 50vh;
+  height: 410px;
   margin: 0 auto;
-  padding: 40px;
   text-align: center;
   
 }
 
 .form-wrap h2 {
   color: #24e8ca;
+  margin: 15px 0;
 }
 
 .input-wrap {
@@ -68,6 +75,7 @@ header{
 .input-wrap label{
   min-width: 200px;
   margin-right: 50px;
+  margin-left: 50px;
   font-size: 20px;
   color: #24e8ca;
   text-align: left;
@@ -119,8 +127,12 @@ input[type="submit"]:hover {
 }
 
 #helmet {
-  color: white;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.232)),
+  url("../public/img/soldier_dark2.jpg");
+
   width: 50vw;
-  height: 50vh;
-  opacity: 20%;
+  height: 410px;
+  color: white;
+  background-size: cover;
 }
+

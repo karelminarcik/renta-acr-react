@@ -2,6 +2,7 @@ import OnePictureSlider from "./components/Slider"
 import Navbar from "./components/Navbar"
 import Selectrank from "./components/Selectrank"
 import SelectAge  from "./components/SelectAge"
+import './script.js'
 
 
 const App = () => {
@@ -29,12 +30,12 @@ const App = () => {
             </form>
 
             <div id="helmet">
-              <img src="/img/soldier_dark2.jpg" alt="rentaacr" />
+              <h2>Vase Renta</h2>
             </div>
           </div>
 
           
-          
+          {/* <script src="script.js"></script> */}
   
   </>  
   
