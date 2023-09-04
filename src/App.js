@@ -16,6 +16,14 @@ const App = () => {
     setSelectedRank(value);
   };
 
+  const [selectedAge, setSelectedAge] = useState('');
+
+  const handleAgeChange = (value) => {
+    setSelectedAge(value);
+  };
+
+  const [extramoney, setExtramoney] = useState("")
+
   return <>
           <Navbar />
           <div className="slider">
@@ -28,11 +36,15 @@ const App = () => {
               
               <Selectrank onSelect={handleRankChange}/>
             
-              <SelectAge />
+              <SelectAge onSelect={handleAgeChange}/>
               
               <div className="input-wrap">
                 <label for="extraMoney">Výkonnostní příspěvek</label>
-                <input type="text" id="extraMoney"/>
+                <input type="text" id="extraMoney" onChange={ (event) => {
+                  event.preventDefault()
+                  setExtramoney(event.target.value)
+                  }
+                }/>
               </div>
               
               <input type="submit" value="Spočítat" />
@@ -42,6 +54,8 @@ const App = () => {
             <div id="helmet">
               <h2>Vase Renta</h2>
               <p>Vaše hodnost: {selectedRank}</p>
+              <p>Odsloužené roky: {selectedAge}</p>
+              <p>Výkonnostní příspěvek: {extramoney}</p>
             </div>
           </div>
 

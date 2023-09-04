@@ -9,6 +9,8 @@ const SelectAge = () => {
     setSelectedValue(event.target.value);
   };
 
+  
+
   return (
     <div className='input-wrap'>
       <label for="selectage">Odsloužené roky</label>
