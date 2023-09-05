@@ -1,30 +1,23 @@
-import React, { useState } from 'react';
+import {ages} from "../data"
 
-const SelectAge = () => {
-  const [selectedValue, setSelectedValue] = useState("");
+const Selectage = ({ onSelect }) => {
+  const handleAgeChange = (event) => {
+      const selectedValue = event.target.value
+      onSelect(selectedValue)
+  }
 
-  const options = Array.from({ length: 31 }, (_, index) => 15 + index); // Create an array of numbers from 15 to 45
-
-  const handleChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
-
+  return <div className='input-wrap'>
+          <label htmlFor="selectage">Odsloužené roky</label>
+          <select id="selectage" onChange={handleAgeChange}>
+            {ages.map((oneAge) => (
+                <option key={oneAge.age} value={oneAge.age}>
+                  {oneAge.age}
+                </option>
+              ))}
+          </select>
+        </div>
   
+}
 
-  return (
-    <div className='input-wrap'>
-      <label for="selectage">Odsloužené roky</label>
-        
-      <select id="selectage"value={selectedValue} onChange={handleChange}>
-        {options.map((value) => (
-          <option key={value} value={value}>
-            {value}
-          </option>
-        ))}
-      </select>
-    </div>
-  );
-};
-
-export default SelectAge;
+export default Selectage
 

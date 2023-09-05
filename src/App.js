@@ -3,7 +3,7 @@ import OnePictureSlider from "./components/Slider"
 import Navbar from "./components/Navbar"
 import Selectrank from "./components/Selectrank"
 import SelectAge  from "./components/SelectAge"
-import './script.js'
+
 
 
 const App = () => {
@@ -16,13 +16,17 @@ const App = () => {
     setSelectedRank(value);
   };
 
+ // Initialize state to store the selected age
   const [selectedAge, setSelectedAge] = useState('');
 
+ // Callback function to update the selected age
   const handleAgeChange = (value) => {
     setSelectedAge(value);
   };
 
-  const [extramoney, setExtramoney] = useState("")
+
+
+  const [extramoney, setExtramoney] = useState("0")
 
   return <>
           <Navbar />
@@ -40,11 +44,12 @@ const App = () => {
               
               <div className="input-wrap">
                 <label for="extraMoney">Výkonnostní příspěvek</label>
-                <input type="text" id="extraMoney" onChange={ (event) => {
+                <input type="number" min="0" max="20" step="0.5" id="extraMoney" value={extramoney} onChange={ (event) => {
                   event.preventDefault()
                   setExtramoney(event.target.value)
                   }
                 }/>
+                              
               </div>
               
               <input type="submit" value="Spočítat" />
@@ -60,7 +65,7 @@ const App = () => {
           </div>
 
           
-          {/* <script src="script.js"></script> */}
+  
   
   </>  
   
